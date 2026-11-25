@@ -1,0 +1,36 @@
+{
+  "name": "ImportNow - Direct Imports from China to India",
+  "short_name": "ImportNow",
+  "description": "Import directly from China without the guesswork. Sourcing, factory inspection, shipping & customs handled end-to-end.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A1628",
+  "theme_color": "#00D4AA",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "shopping"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Get a Quote",
+      "short_name": "Quote",
+      "description": "Get a free sourcing quote",
+      "url": "/#contact",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "How It Works",
+      "short_name": "Journey",
+      "description": "See how the import process works",
+      "url": "/#journey",
+      "icons": [{ "src": "/favicon.svg", "sizes": "192x192" }]
+    }
+  ]
+}

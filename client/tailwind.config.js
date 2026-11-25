@@ -1,0 +1,198 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        // Exact colors from reference design
+        brand: {
+          navy: '#0A1628',
+          'navy-light': '#111D3A',
+          teal: '#00D4AA',
+          'teal-dark': '#00B894',
+          'teal-light': '#E6FFFA',
+          gold: '#F5C542',
+          'gold-dark': '#E8B435',
+          red: '#EF3028',
+          'red-dark': '#E3241B',
+          'red-light': '#FEF2F2',
+        },
+        neutral: {
+          50: '#FAFAFA',
+          100: '#F4F4F5',
+          200: '#E4E4E7',
+          300: '#D4D4D8',
+          400: '#A1A1AA',
+          500: '#71717A',
+          600: '#52525B',
+          700: '#3F3F46',
+          800: '#27272A',
+          900: '#18181B',
+          950: '#0A0A0A',
+        },
+        surface: {
+          DEFAULT: '#FFFFFF',
+          elevated: '#F7F7F7',
+          card: '#FFFFFF',
+        },
+        text: {
+          primary: '#0A0A0A',
+          secondary: '#52525B',
+          muted: '#68686E',
+          inverse: '#FFFFFF',
+        },
+        border: {
+          DEFAULT: '#E4E4E7',
+          light: '#F4F4F5',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Sora', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+      },
+      fontSize: {
+        'display-xl': ['clamp(3.5rem, 6vw, 5.5rem)', { lineHeight: '1.05', letterSpacing: '-0.055em' }],
+        'display-lg': ['clamp(3rem, 5.5vw, 4.65rem)', { lineHeight: '1.05', letterSpacing: '-0.055em' }],
+        'display-md': ['clamp(2.5rem, 4.5vw, 4rem)', { lineHeight: '1.1', letterSpacing: '-0.04em' }],
+        'display-sm': ['clamp(2rem, 3.5vw, 3rem)', { lineHeight: '1.15' }],
+        'heading-xl': ['clamp(2.25rem, 3.5vw, 3.5rem)', { lineHeight: '1.15', letterSpacing: '-0.035em' }],
+        'heading-lg': ['clamp(1.75rem, 3vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '-0.03em' }],
+        'heading-md': ['clamp(1.5rem, 2.5vw, 2rem)', { lineHeight: '1.25', letterSpacing: '-0.02em' }],
+        'heading-sm': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.3' }],
+        'body-xl': ['1.25rem', { lineHeight: '1.7' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.65' }],
+        'body': ['1rem', { lineHeight: '1.6' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.5' }],
+        'caption': ['0.75rem', { lineHeight: '1.5' }],
+        'overline': ['0.75rem', { lineHeight: '1.5', letterSpacing: '0.14em', textTransform: 'uppercase' }],
+      },
+      spacing: {
+        '18': '4.5rem',
+        '22': '5.5rem',
+        '26': '6.5rem',
+        '30': '7.5rem',
+      },
+      borderRadius: {
+        'xl': '14px',
+        '2xl': '16px',
+        '3xl': '18px',
+        '4xl': '22px',
+        'full': '9999px',
+      },
+      boxShadow: {
+        'card': '0 2px 8px rgb(0 0 0 / 4%), 0 30px 60px -24px rgb(0 0 0 / 28%)',
+        'card-hover': '0 4px 12px rgb(0 0 0 / 6%), 0 40px 80px -24px rgb(0 0 0 / 35%)',
+        'glow-red': '0 0 30px -4px rgb(227 36 27 / 0.4)',
+        'glow-teal': '0 0 30px -4px rgb(0 212 170 / 0.4)',
+        'glow-gold': '0 0 30px -4px rgb(245 197 66 / 0.4)',
+        'inner-glow': 'inset 0 1px 0 0 rgb(255 255 255 / 0.1)',
+        'button-primary': '0 8px 18px rgb(0 0 0 / 14%)',
+        'button-primary-hover': '0 10px 22px rgb(0 0 0 / 18%)',
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out forwards',
+        'slide-up': 'slideUp 0.6s ease-out forwards',
+        'slide-down': 'slideDown 0.4s ease-out forwards',
+        'scale-in': 'scaleIn 0.4s ease-out forwards',
+        'spin-slow': 'spin 3s linear infinite',
+        'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'bounce-slow': 'bounce 2s ease-in-out infinite',
+        'shimmer': 'shimmer 2s ease-in-out infinite',
+        'draw-line': 'drawLine 1.5s ease-out forwards',
+        'count-up': 'countUp 1.5s ease-out forwards',
+        'float': 'float 6s ease-in-out infinite',
+        'globe-rotate': 'globeRotate 20s linear infinite',
+        'ship-rock': 'shipRock 6s ease-in-out infinite',
+        'reflection-drift': 'reflectionDrift 8s ease-in-out infinite alternate',
+        'scene-drift': 'sceneDrift 32s ease-in-out infinite alternate',
+        'scroll-cue': 'scrollCue 2s infinite',
+        'live-blink': 'liveBlink 1.6s infinite',
+        'marquee': 'marquee 40s linear infinite',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        scaleIn: {
+          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '100%': { opacity: '1', transform: 'scale(1)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        drawLine: {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
+        countUp: {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+        globeRotate: {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(360deg)' },
+        },
+        shipRock: {
+          '50%': { transform: 'translateY(3px)' },
+        },
+        reflectionDrift: {
+          'to': { transform: 'translateX(24px)' },
+        },
+        sceneDrift: {
+          'from': { transform: 'scale(1.02) translateX(0)' },
+          'to': { transform: 'scale(1.1) translateX(-1.5%)' },
+        },
+        scrollCue: {
+          '0%': { transform: 'scaleY(0)', transformOrigin: 'top' },
+          '50%': { transform: 'scaleY(1)', transformOrigin: 'top' },
+          '51%': { transformOrigin: 'bottom' },
+          '100%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+        },
+        liveBlink: {
+          '50%': { opacity: '0.3' },
+        },
+        marquee: {
+          'to': { transform: 'translateX(-50%)' },
+        },
+      },
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+      },
+      transitionTimingFunction: {
+        'spring': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+        'expo-out': 'cubic-bezier(0.19, 1, 0.22, 1)',
+        'smooth': 'cubic-bezier(0.2, 0.8, 0.2, 1)',
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'hero-gradient': 'radial-gradient(ellipse at 74% 49%, rgb(226 238 255 / 30%), transparent 36%), linear-gradient(110deg, #fff 0%, #fbfbfb 57%, #fff 100%)',
+        'shimmer-gradient': 'linear-gradient(90deg, transparent, rgb(255 255 255 / 0.1), transparent)',
+        'red-gradient': 'linear-gradient(135deg, #EF3028 0%, #E3241B 100%)',
+        'gold-gradient': 'linear-gradient(135deg, #F5C542 0%, #E8B435 100%)',
+        'teal-gradient': 'linear-gradient(135deg, #00D4AA 0%, #00B894 100%)',
+      },
+    },
+  },
+  plugins: [],
+}
